@@ -1,0 +1,26 @@
+.habit {
+  width: 100%;
+  list-style: none;
+}
+
+.habit-name {
+  font-size: 24px;
+  align-items: center;
+  margin: 0 20px;
+  text-align: left;
+}
+
+.habit-counter {
+  width: 38px;
+  height: 38px;
+  border-radius: 40px;
+  background: yellow;
+  font-size: 16px;
+}
+
+.habit-button {
+  background-color: transparent;
+  outline: none;
+  border: 0px;
+  font-size: 20px;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Habit from './habit';
+import './habits.css';
 
 class Habits extends Component {
 

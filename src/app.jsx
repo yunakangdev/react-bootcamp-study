@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import './app.css';
-import Nav from './components/nav';
+import Header from './components/header';
 import Habits from './components/habits';
+import Input from './components/input';
 
 class App extends Component {
-
   state = {
     habits: [
       { id: 1, name: 'Reading', count: 0 },
       { id: 2, name: 'Running', count: 0 },
       { id: 3, name: 'Dancing', count: 0 },
-    ]
+    ],
+    total: 0
   }
 
   handleIncrement = (habit) => {
@@ -36,14 +37,15 @@ class App extends Component {
   }
 
   render() {
-
     const { habits } = this.state
+    const { total } = this.state
 
     return (
-      <>
-        <Nav habits={habits} />
+      <div className="app">
+        <Header habits={habits} total={total} />
+        <Input />
         <Habits habits={habits} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} onDelete={this.handleDelete} />
-      </>
+      </div>
     );
   }
 }

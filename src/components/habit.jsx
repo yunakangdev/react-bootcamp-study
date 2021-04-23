@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FaPlusCircle, FaMinusCircle, FaTrash } from 'react-icons/fa';
+import './habit.css';
 
 class Habit extends Component {
 

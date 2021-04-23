@@ -1,0 +1,25 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 45%;
+  height: 28px;
+  margin: 20px;
+  border: 1px slategrey solid;
+}
+
+.input-btn {
+  width: 60px;
+  height: 32px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: green;
+  border: 0px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
