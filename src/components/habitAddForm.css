@@ -1,17 +1,17 @@
-.input-container {
+.add-form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.input {
+.add-input {
   width: 45%;
   height: 28px;
   margin: 20px;
   border: 1px slategrey solid;
 }
 
-.input-btn {
+.add-button {
   width: 60px;
   height: 32px;
   font-size: 16px;

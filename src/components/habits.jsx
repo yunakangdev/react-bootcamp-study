@@ -19,7 +19,7 @@ class Habits extends Component {
   render() {
     return (
       <>
-        <ul className="habits">
+        <table className="habits">
           {
             this.props.habits.map((habit) => {
               return <Habit 
@@ -31,7 +31,7 @@ class Habits extends Component {
                     />
             })
           }
-        </ul>
+        </table>
       </>
     );
   }

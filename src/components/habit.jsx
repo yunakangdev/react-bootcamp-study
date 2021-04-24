@@ -19,13 +19,13 @@ class Habit extends Component {
   render() {
     return (
       <>
-        <li className="habit">
-          <span className="habit-name">{this.props.habit.name}</span>
-          <span className="habit-counter">{this.props.habit.count}</span>
-          <button className="habit-button habit-increment" onClick={this.handleIncrement}><FaPlusCircle /></button>
-          <button className="habit-button habit-decrement" onClick={this.handleDecrement}><FaMinusCircle /></button>
-          <button className="habit-button habit-delete" onClick={this.handleDelete}><FaTrash /></button>
-        </li>
+        <tr className="habit">
+          <td className="habit-name">{this.props.habit.name}</td>
+          <td className="habit-counter">{this.props.habit.count}</td>
+          <td><button className="habit-button habit-increment" onClick={this.handleIncrement}><FaPlusCircle /></button></td>
+          <td><button className="habit-button habit-decrement" onClick={this.handleDecrement}><FaMinusCircle /></button></td>
+          <td><button className="habit-button habit-delete" onClick={this.handleDelete}><FaTrash /></button></td>
+        </tr>
       </>
     );
   }

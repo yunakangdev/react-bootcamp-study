@@ -6,9 +6,9 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <i className="leaf"><FaLeaf /></i>
+        <i className="header-logo"><FaLeaf /></i>
         <span className="header-title">Habit Tracker</span>
-        <span className="header-counter">{this.props.total}</span>
+        <span className="header-counter">{this.props.totalCount}</span>
       </header>
     );
   }
