@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './habitAddForm.css';
 
 class HabitAddForm extends Component {
+  inputRef = React.createRef();
+  
   onSubmit = (event) => {
     event.preventDefault();
     console.log(event);

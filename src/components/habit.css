@@ -12,7 +12,7 @@
   font-size: 1.4rem;
   align-items: center;
   text-align: left;
-  width: 150px;
+  width: 120px;
 }
 
 .habit-counter {
@@ -28,7 +28,7 @@
 .habit-button {
   background-color: transparent;
   outline: none;
-  border: 0px;
+  border: 0;
   font-size: 1.8rem;
   cursor: pointer;
   margin-top: 0.5rem;

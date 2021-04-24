@@ -7,19 +7,19 @@
 .add-input {
   width: 45%;
   height: 28px;
-  margin: 20px;
+  margin: 2em;
   border: 1px slategrey solid;
 }
 
 .add-button {
   width: 60px;
   height: 32px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: white;
   background: green;
-  border: 0px;
-  border-radius: 4px;
+  border: 0;
+  border-radius: 10%;
   outline: none;
   cursor: pointer;
 }

@@ -27,8 +27,8 @@ header {
 }
 
 .header-counter {
-  font-size: 28px;
-  font-weight: 600px;
+  font-size: 1.5rem;
+  font-weight: 600;
   display: flex;
   justify-content: center;
   align-items: center;
