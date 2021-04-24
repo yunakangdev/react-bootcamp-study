@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import './habitAddForm.css';
 
 class HabitAddForm extends Component {
+  onSubmit = (event) => {
+    event.preventDefault();
+    console.log(event);
+    console.log('submit!');
+  }
+
   render() {
     return (
-      <form className="add-form">
-        <input className="add-input" type="text" placeHolder="Add your habit!"></input>
+      <form className="add-form" onSubmit={this.onSubmit}>
+        <input className="add-input" type="text" placeholder="Add your habit!"></input>
         <button className="add-button">Add</button>
       </form>
     );

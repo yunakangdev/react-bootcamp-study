@@ -14,29 +14,29 @@ class App extends Component {
   }
 
   handleIncrement = (habit) => {
-    console.log(habit.name)
-    let habits = [...this.state.habits]
-    let index = habits.indexOf(habit)
-    habits[index].count++
-    this.setState({ habits })
+    console.log(habit.name);
+    let habits = [...this.state.habits];
+    let index = habits.indexOf(habit);
+    habits[index].count++;
+    this.setState({ habits });
   }
 
   handleDecrement = (habit) => {
-    let habits = [...this.state.habits]
-    let index = habits.indexOf(habit)
-    habits[index].count = habits[index].count <= 0 ? 0 : habits[index].count - 1
-    this.setState({ habits })
+    let habits = [...this.state.habits];
+    let index = habits.indexOf(habit);
+    habits[index].count = habits[index].count <= 0 ? 0 : habits[index].count - 1;
+    this.setState({ habits });
   }
 
   handleDelete = (habit) => {
     let habits = this.state.habits.filter((item) => {
-      return item.id !== habit.id
-    })
-    this.setState({ habits })
+      return item.id !== habit.id;
+    });
+    this.setState({ habits });
   }
 
   render() {
-    const { habits } = this.state
+    const { habits } = this.state;
 
     return (
       <div className="app">

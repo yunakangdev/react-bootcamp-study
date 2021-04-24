@@ -5,21 +5,22 @@ import './habits.css';
 class Habits extends Component {
 
   handleIncrement = (habit) => {
-    this.props.onIncrement(habit)
+    this.props.onIncrement(habit);
   }
 
   handleDecrement = (habit) => {
-    this.props.onDecrement(habit)
+    this.props.onDecrement(habit);
   }
 
   handleDelete = (habit) => {
-    this.props.onDelete(habit)
+    this.props.onDelete(habit);
   }
 
   render() {
     return (
       <>
         <table className="habits">
+          <tbody>
           {
             this.props.habits.map((habit) => {
               return <Habit 
@@ -31,6 +32,7 @@ class Habits extends Component {
                     />
             })
           }
+          </tbody>
         </table>
       </>
     );
