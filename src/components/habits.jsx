@@ -21,10 +21,11 @@ class Habits extends Component {
   }
 
   render() {
+    console.log('habits rendered!');
     return (
-      <>
+      <div className="habits">
         <HabitAddForm onAdd={this.handleAdd} />
-        <table className="habits">
+        <table>
           <tbody>
           {
             this.props.habits.map((habit) => {
@@ -38,11 +39,11 @@ class Habits extends Component {
             })
           }
           </tbody>
+        </table>
         <button className="habits-reset" onClick={this.props.onReset}>
           Reset All
         </button>
-        </table>
-      </>
+      </div>
     );
   }
 }
