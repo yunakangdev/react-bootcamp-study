@@ -38,6 +38,9 @@ class Habits extends Component {
             })
           }
           </tbody>
+        <button className="habits-reset" onClick={this.props.onReset}>
+          Reset All
+        </button>
         </table>
       </>
     );
