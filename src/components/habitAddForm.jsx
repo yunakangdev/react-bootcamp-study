@@ -6,14 +6,20 @@ class HabitAddForm extends Component {
   
   onSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
-    console.log('submit!');
+    const name = this.inputRef.current.value;
+    name && this.props.onAdd(name);
+    this.inputRef.current.value = '';
   }
 
   render() {
     return (
       <form className="add-form" onSubmit={this.onSubmit}>
-        <input className="add-input" type="text" placeholder="Add your habit!"></input>
+        <input
+          ref={this.inputRef} 
+          type="text" 
+          className="add-input" 
+          placeholder="Add your habit!"
+        />
         <button className="add-button">Add</button>
       </form>
     );

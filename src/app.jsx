@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './app.css';
 import Header from './components/header';
 import Habits from './components/habits';
-import HabitAddForm from './components/habitAddForm';
 
 class App extends Component {
   state = {
@@ -35,14 +34,24 @@ class App extends Component {
     this.setState({ habits });
   }
 
+  handleAdd = (name) => {
+    // const habits = [...this.state.habits, { id: Date.now(), name: name, count: 0 }];
+    const habits = [...this.state.habits, { id: Date.now(), name, count: 0 }];
+    this.setState({ habits });
+  }
+
   render() {
     const { habits } = this.state;
 
     return (
       <div className="app">
         <Header totalCount={this.state.habits.filter((item) => item.count > 0).length}/>
-        <HabitAddForm />
-        <Habits habits={habits} onIncrement={this.handleIncrement} onDecrement={this.handleDecrement} onDelete={this.handleDelete} />
+        <Habits habits={habits} 
+                onIncrement={this.handleIncrement} 
+                onDecrement={this.handleDecrement} 
+                onDelete={this.handleDelete} 
+                onAdd={this.handleAdd}
+                />
       </div>
     );
   }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Habit from './habit';
+import HabitAddForm from './habitAddForm';
 import './habits.css';
 
 class Habits extends Component {
-
   handleIncrement = (habit) => {
     this.props.onIncrement(habit);
   }
@@ -16,9 +16,14 @@ class Habits extends Component {
     this.props.onDelete(habit);
   }
 
+  handleAdd = (name) => {
+    this.props.onAdd(name);
+  }
+
   render() {
     return (
       <>
+        <HabitAddForm onAdd={this.handleAdd} />
         <table className="habits">
           <tbody>
           {

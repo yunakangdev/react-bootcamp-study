@@ -3,7 +3,6 @@ import { FaPlusCircle, FaMinusCircle, FaTrash } from 'react-icons/fa';
 import './habit.css';
 
 class Habit extends Component {
-
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   }
