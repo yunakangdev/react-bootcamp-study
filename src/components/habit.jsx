@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { FaPlusCircle, FaMinusCircle, FaTrash } from 'react-icons/fa';
 import './habit.css';
 
-class Habit extends Component {
+class Habit extends PureComponent {
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   }
@@ -16,6 +16,7 @@ class Habit extends Component {
   }
 
   render() {
+    console.log('habit rendered!');
     return (
       <>
         <tr className="habit">

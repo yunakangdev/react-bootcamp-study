@@ -4,6 +4,7 @@ import { FaLeaf } from 'react-icons/fa';
 
 class Header extends Component {
   render() {
+    console.log('header rendered!');
     return (
       <header>
         <i className="header-logo"><FaLeaf /></i>

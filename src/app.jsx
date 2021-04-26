@@ -50,6 +50,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('app rendered!');
     const { habits } = this.state;
 
     return (
