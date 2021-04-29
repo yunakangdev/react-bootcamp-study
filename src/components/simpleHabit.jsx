@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 
 const SimpleHabit = (props) => {
 
-  // State in class type components
+  // State in class components
   // state = {
   //   count: 0,
   // };
 
-  // State in function type components (useState() API)
+  // State in functional components (useState() API)
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
