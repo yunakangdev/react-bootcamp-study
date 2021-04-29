@@ -60,7 +60,7 @@ class App extends Component {
     // });
     // this.setState({ habits });
     let habits = this.state.habits.map((item) => {
-      return { ...habit, count: 0 };
+      return { ...item, count: 0 };
     });
     this.setState({ habits });
   }

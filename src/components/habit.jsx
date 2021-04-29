@@ -5,6 +5,7 @@ import './habit.css';
 class Habit extends PureComponent {
   // life cycle practice
   componentDidMount() {
+    // printed when Component is added
     console.log(`habit: ${this.props.habit.name} mounted`);
   }
 
