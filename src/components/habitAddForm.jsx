@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './habitAddForm.css';
 
-const HabitAddForm = (props) => {
+const HabitAddForm = memo((props) => {
   const formRef = React.createRef();
   const inputRef = React.createRef();
   
@@ -24,6 +24,6 @@ const HabitAddForm = (props) => {
       <button className="add-button">Add</button>
     </form>
   );
-};
+});
 
 export default HabitAddForm;
