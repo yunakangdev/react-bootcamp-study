@@ -11,7 +11,7 @@ const SimpleHabit = (props) => {
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
-    setState({ count: count + 1 });
+    setCount({ count: count + 1 });
   };
   
   return (
