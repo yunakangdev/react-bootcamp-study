@@ -7,12 +7,24 @@ const SimpleHabit = (props) => {
   //   count: 0,
   // };
 
-  // State in functional components (useState() API)
+  // useState in functional components (useState() API)
   const [count, setCount] = useState(0);
 
-  const handleIncrement = () => {
+  // Ref in class components
+  // const spanRef = React.createRef();
+
+  // useRef in functional components
+  const spanRef = useRef(); // make reference only once in the memory
+
+  // member variable(function) in class components
+  // const handleIncrement = () => {
+  //   setCount({ count: count + 1 });
+  // };
+
+  // useCallback() in functional components
+  const handleIncrement = useCallback(() => {
     setCount({ count: count + 1 });
-  };
+  });
   
   return (
     <li className="habit">
