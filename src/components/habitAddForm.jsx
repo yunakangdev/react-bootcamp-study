@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import './habitAddForm.css';
 
 const HabitAddForm = (props) => {
@@ -7,16 +7,16 @@ const HabitAddForm = (props) => {
   
   const onSubmit = (event) => {
     event.preventDefault();
-    const name = this.inputRef.current.value;
-    name && this.props.onAdd(name);
-    // this.inputRef.current.value = '';
-    this.formRef.current.reset();
+    const name = inputRef.current.value;
+    name && props.onAdd(name);
+    // inputRef.current.value = '';
+    formRef.current.reset();
   };
 
   return (
-    <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
+    <form ref={formRef} className="add-form" onSubmit={onSubmit}>
       <input
-        ref={this.inputRef} 
+        ref={inputRef} 
         type="text" 
         className="add-input" 
         placeholder="Add your habit!"
