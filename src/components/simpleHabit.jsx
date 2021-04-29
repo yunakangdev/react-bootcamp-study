@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const SimpleHabit = (props) => {
 
+  // React Hooks
+  
   // State in class components
   // state = {
   //   count: 0,
