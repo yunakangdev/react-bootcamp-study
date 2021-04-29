@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class SimpleHabit extends Component {
-  state = {
-    count: 0,
+const SimpleHabit = (props) => {
+
+  // State in class type components
+  // state = {
+  //   count: 0,
+  // };
+
+  // State in function type components (useState() API)
+  const [count, setCount] = useState(0);
+
+  const handleIncrement = () => {
+    setState({ count: count + 1 });
   };
-
-  handleIncrement = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
-
-  render() {
-    return (
-      <li className="habit">
-        <span className="habit-name">Reading</span>
-        <span className="habit-count">{this.state.count}</span>
-        <button
-          className="habit-button habit-increase"
-          onClick={this.handleIncrement}
-        >
-          <i className="fas fa-plus-square"></i>
-        </button>
-      </li>
-    );
-  }
-}
+  
+  return (
+    <li className="habit">
+      <span className="habit-name">Reading</span>
+      <span className="habit-count">{count}</span>
+      <button
+        className="habit-button habit-increase"
+        onClick={handleIncrement}
+      >
+        <i className="fas fa-plus-square"></i>
+      </button>
+    </li>
+  );
+};
 
 export default SimpleHabit;
