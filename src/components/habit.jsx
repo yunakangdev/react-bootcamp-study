@@ -3,6 +3,15 @@ import { FaPlusCircle, FaMinusCircle, FaTrash } from 'react-icons/fa';
 import './habit.css';
 
 class Habit extends PureComponent {
+  // life cycle practice
+  componentDidMount() {
+    console.log(`habit: ${this.props.habit.name} mounted`);
+  }
+
+  componentWillUnmount() {
+    console.log(`habit: ${this.props.habit.name} will unmount`);
+  }
+
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);
   }
